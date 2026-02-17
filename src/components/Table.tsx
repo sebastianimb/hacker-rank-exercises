@@ -1,4 +1,3 @@
-import React from "react";
 import { cryptocurrencyList } from "../utils/cryptocurrency";
 function Table({ amount, error }: { amount: number; error: string }) {
   return (
