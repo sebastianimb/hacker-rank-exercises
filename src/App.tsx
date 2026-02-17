@@ -1,35 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Aside from "./components/shared/Aside";
+import Virtualization from "./pages/Virtualization";
+import ItemListManager from "./pages/ItemListManager";
+import { Switch, Route } from "wouter";
+import "./App.css";
+import StateManager from "./pages/StateManager";
+import ArticleSorting from "./pages/ArticleSorting";
+import EmployeeValidationForm from "./pages/EmployeeValidation";
+import BlogSpot from "./pages/BlogSpot";
+import SlideShow from "./pages/SlideShow";
+import { WordOmitter } from "./pages/WordOmmiter";
+import CryptoRank from "./pages/CryptoRank";
+import Header from "./components/shared/Header";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="relative">
+      <Header />
+      <div className="flex h-screen">
+        <Aside />
+        <main className="flex-1 my-0 mx-auto h-screen">
+          <Switch>
+            <Route
+              path="/"
+              component={() => (
+                <div className="flex flex-col justify-center h-full">
+                  <h1 className="text-center mt-8 text-3xl font-bold">
+                    Welcome to the HackerRank Exercises!
+                  </h1>
+                  <h2 className="text-center mt-8 text-xl text-neutral-500 font-bold">
+                    Choose an exercise from the navigation.
+                  </h2>
+                </div>
+              )}
+            />
+            <Route path="/virtualization" component={Virtualization} />
+            <Route path="/item-list-manager" component={ItemListManager} />
+            <Route path="/code-review-feedback" component={StateManager} />
+            <Route path="/article-sorting" component={ArticleSorting} />
+            <Route path="/blog-post" component={BlogSpot} />
+            <Route path="/slide-show" component={SlideShow} />
+            <Route
+              path="/employee-validation"
+              component={EmployeeValidationForm}
+            />
+            <Route path="/word-omitter" component={WordOmitter} />
+            <Route path="/cryptorank-exchange" component={CryptoRank} />
+          </Switch>
+        </main>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;

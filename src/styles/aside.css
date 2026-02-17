@@ -1,0 +1,29 @@
+aside {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  border-bottom: 1px solid #333;
+  background-color: #1a1a1a;
+  padding: 2rem;
+  width: 15rem;
+  height: 100%;
+}
+
+.burger-aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  border-bottom: 1px solid #333;
+  background-color: #1a1a1a;
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  aside {
+    display: flex;
+  }
+}
