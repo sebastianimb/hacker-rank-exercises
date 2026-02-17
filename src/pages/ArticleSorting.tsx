@@ -10,7 +10,7 @@ type Article = {
 export function Articles({ articles = [] }: { articles: Article[] }) {
   return (
     <div className="flex flex-col items-center justify-center">
-      <table className="border border-separate border-spacing-0 rounded-xl border-neutral-800 text-left w-2xl">
+      <table className="border border-separate border-spacing-0 rounded-xl border-neutral-800 text-left">
         <thead className="p-8">
           <tr className="">
             <th className="p-4">Title</th>
@@ -52,25 +52,27 @@ function ArticleSorting() {
     setArticles(sortedArticles);
   };
   return (
-    <div className="App">
-      <div className="flex gap-8 items-center justify-center my-20 navigation">
+    <div className="w-full p-4 flex justify-center items-center flex-col">
+      <div className="flex gap-8 flex-wrap items-center justify-center my-20 navigation">
         <label className="form-hint mb-0 font-bold text-uppercase font-weight-light">
           Sort By
         </label>
-        <button
-          data-testid="most-upvoted-link"
-          className="p-4 bg-green-500 text-white rounded-md"
-          onClick={handleMostUpvoted}
-        >
-          Most Upvoted
-        </button>
-        <button
-          data-testid="most-recent-link"
-          className="p-4 bg-green-500 text-white rounded-md"
-          onClick={handleMostRecent}
-        >
-          Most Recent
-        </button>
+        <div className="flex flex-wrap gap-4">
+          <button
+            data-testid="most-upvoted-link"
+            className="p-4 bg-green-500 text-white rounded-md"
+            onClick={handleMostUpvoted}
+          >
+            Most Upvoted
+          </button>
+          <button
+            data-testid="most-recent-link"
+            className="p-4 bg-green-500 text-white rounded-md"
+            onClick={handleMostRecent}
+          >
+            Most Recent
+          </button>
+        </div>
       </div>
       <Articles articles={articles} />
     </div>

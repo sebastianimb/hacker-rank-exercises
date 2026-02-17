@@ -31,6 +31,17 @@ function WordOmitter() {
 
   return (
     <div className="mx-auto max-w-96 my-0 w-full self-center flex flex-col p-8 gap-2 items-center mt-8">
+      <div className="pb-8">
+        <p className="pb-4">Omitted Words:</p>
+        {OMITTED_WORDS.map((word, index) => (
+          <span
+            key={index}
+            className="inline-block bg-neutral-800 text-neutral-300 px-2 py-1 rounded mr-2 mb-2"
+          >
+            {word}
+          </span>
+        ))}
+      </div>
       <textarea
         placeholder="Type here..."
         value={inputText}

@@ -21,6 +21,7 @@ function FormInput(props: {
       className="flex flex-col items-start w-64 mb-10 input-form"
       data-testid={`input-${name}`}
     >
+      {/* input y p deben ser hermanos directos para el selector CSS */}
       <input
         className="w-full p-4 outline-none border border-neutral-800 rounded-md"
         data-testid={`input-${name}-test`}

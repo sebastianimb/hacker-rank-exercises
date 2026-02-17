@@ -3,7 +3,7 @@ import "../../styles/aside.css";
 
 function Aside() {
   return (
-    <aside className="text-neutral-300 bg-neutral-900 border-neutral-800">
+    <aside className="text-neutral-300 bg-neutral-900 border-r border-neutral-800">
       <Link className="hover:text-white" href="/">
         Home
       </Link>

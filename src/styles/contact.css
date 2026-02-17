@@ -2,6 +2,6 @@
   display: none;
 }
 
-input:invalid[data-focused="true"] ~ p {
+input:invalid[data-focused="true"] + #error {
   display: block;
 }
