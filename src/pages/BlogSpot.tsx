@@ -28,7 +28,7 @@ function BlogSpot() {
         <Input data={data} setData={setData} />
         <button
           data-testid="create-button"
-          className="p-4 bg-green-500 w-full text-white rounded-md"
+          className="p-4 bg-green-500 w-full cursor-pointer text-white rounded-md"
           onClick={handleCreatePost}
           disabled={!data.title || !data.description}
         >

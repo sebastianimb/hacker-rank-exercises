@@ -25,7 +25,7 @@ function ItemListManager() {
         <button
           onClick={handleAddItem}
           data-testid="add-button"
-          className="border min-w-64 mb-4 border-neutral-800 w-fit p-4 rounded-md bg-neutral-800 text-white hover:bg-neutral-700"
+          className="border min-w-64 mb-4 cursor-pointer border-neutral-800 w-fit p-4 rounded-md bg-neutral-800 text-white hover:bg-neutral-700"
         >
           Add Item
         </button>

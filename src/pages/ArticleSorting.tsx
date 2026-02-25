@@ -60,14 +60,14 @@ function ArticleSorting() {
         <div className="flex flex-wrap gap-4">
           <button
             data-testid="most-upvoted-link"
-            className="p-4 bg-green-500 text-white rounded-md"
+            className="p-4 bg-green-500 cursor-pointer text-white rounded-md"
             onClick={handleMostUpvoted}
           >
             Most Upvoted
           </button>
           <button
             data-testid="most-recent-link"
-            className="p-4 bg-green-500 text-white rounded-md"
+            className="p-4 bg-green-500 cursor-pointer text-white rounded-md"
             onClick={handleMostRecent}
           >
             Most Recent

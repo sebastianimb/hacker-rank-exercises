@@ -20,14 +20,14 @@ export const FeedBack = ({
       <div className="flex mx-0 gap-4 justify-content-around">
         <button
           onClick={handleUpVotes}
-          className="px-8 bg-green-500 text-white rounded-md p-4"
+          className="px-8 bg-green-500 cursor-pointer text-white rounded-md p-4"
           data-testid={`upvote-btn-${index}`}
         >
           👍 Upvote
         </button>
         <button
           onClick={handleDownVotes}
-          className="px-8 bg-red-500 text-white rounded-md p-4"
+          className="px-8 bg-red-500 cursor-pointer text-white rounded-md p-4"
           data-testid={`downvote-btn-${index}`}
         >
           👎 Downvote
